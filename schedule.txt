@@ -3,5 +3,5 @@ CT: 7:45-8:15
 1stBlock: 8:20-9:38
 2ndBlock: 9:46-11:01
 3rdBlock: 11:06-12:48
-WinTime: 12:53-1:22
-4thBlock: 1:27-2:45
+WinTime: 12:53-13:22
+4thBlock: 13:27-14:45

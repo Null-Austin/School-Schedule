@@ -1,6 +1,14 @@
 file = open('schedule.txt', 'r')
 schedule = file.read()
+file.close
+file1 = open('timed.txt')
+td=int(file1.readlines()[1])
+file1.close()
 
+import time
+from datetime import datetime
+
+currentDateAndTime = datetime.now()
 def get_times():
     lines = schedule.splitlines()[1:]  # get all text except the first line
     num_lines = len(lines)  # how many lines there are
@@ -27,5 +35,12 @@ def get_clases():
     return time_list
 def split_times(time):
     return([time.replace('-',' ').split(' ', 1)[1],time.replace('-',' ').split(' ', 1)[0]][::-1])
+def currenttime():
+    clock = datetime.now()
+    a=str(currentDateAndTime.minute)
+    if len(a) == 1:
+        a="0"+a
+    return(str(currentDateAndTime.hour+td)+':'+a)
 
-times = get_times()
+ClassTimes = get_times()
+ClassSchedule = get_clases
