@@ -40,7 +40,26 @@ def currenttime():
     a=str(currentDateAndTime.minute)
     if len(a) == 1:
         a="0"+a
-    return(str(currentDateAndTime.hour+td)+':'+a)
+    #return(str(currentDateAndTime.hour+td)+':'+a)
+    return("10:34")
 
 ClassTimes = get_times()
-ClassSchedule = get_clases
+ClassSchedule = get_clases()
+ctime = currenttime()
+x=0
+while(True):
+    print(x)
+    if split_times(ClassTimes[x])[0]<=ctime:
+        print("ctime is bigger")
+        while(True):
+            x+=1
+            print(x)
+            if split_times(ClassTimes[x])[0]<=ctime:
+                print("classtime is bigger")
+                x-=1
+                break
+            continue
+        continue
+    x+=1
+    continue
+print(ClassSchedule[x])
